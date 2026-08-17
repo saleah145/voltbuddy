@@ -66,6 +66,37 @@ DATASETS = {
         power_fields=("maximum_nameplate_output_current_a",),
         feature_fields=("input_voltage_v", "network_protocol_capable", "connected_functionality"),
     ),
+    "computer": DatasetConfig(
+        "rxdj-2c88", "computer", "ENERGY STAR Computers",
+        (),
+        feature_fields=("type", "processor_brand", "operating_system_name", "additional_model_information"),
+    ),
+    "display": DatasetConfig(
+        "qbg3-d468", "display", "ENERGY STAR Displays",
+        (),
+        (("screen_size_inches", "in"),),
+        feature_fields=("display_type", "panel_type", "native_resolution_pixels", "additional_model_information"),
+        product_type_fields=("display_type",),
+    ),
+    "air purifier": DatasetConfig(
+        "gaa3-swy6", "air purifier", "ENERGY STAR Room Air Cleaners",
+        (),
+        (("room_size_sq_ft", "sq ft"),),
+        feature_fields=("room_size_sq_ft", "smoke_free_clean_air_delivery", "additional_model_information"),
+    ),
+    "dehumidifier": DatasetConfig(
+        "mgiu-hu4z", "dehumidifier", "ENERGY STAR Dehumidifiers",
+        ("annual_energy_consumption_kwh_yr",),
+        (("dehumidifier_water_removal_capacity_per_appendix_x1_pints_day", "pints/day"),),
+        feature_fields=("dehumidifier_type", "refrigerant_type", "additional_model_information"),
+        product_type_fields=("dehumidifier_type",),
+    ),
+    "freezer": DatasetConfig(
+        "8t9c-g3tn", "freezer", "ENERGY STAR Residential Freezers",
+        ("annual_energy_use_kwh_yr",),
+        (("capacity_total_volume_ft3", "cu ft"),),
+        feature_fields=("type", "defrost_type", "compact", "built_in", "additional_model_information"),
+    ),
 }
 
 
