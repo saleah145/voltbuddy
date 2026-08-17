@@ -18,11 +18,7 @@ export function VoltBuddyProvider({ children }) {
 
   const [hour, setHour] = useState(12)
   const [appliances, setAppliances] = useState([])
-  const [selectedAppliances, setSelectedAppliances] = useState([
-    'ev_charger',
-    'gaming_pc',
-    'refrigerator',
-  ])
+  const [selectedAppliances, setSelectedAppliances] = useState([])
 
   const [simulation, setSimulation] = useState(null)
   const [simulationMessage, setSimulationMessage] = useState('')
