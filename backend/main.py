@@ -9,6 +9,11 @@ from routers import appliances, grid, homes, simulations
 
 app = FastAPI(title="VoltBuddy API")
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
 models.Base.metadata.create_all(bind=engine)
 
 try:
