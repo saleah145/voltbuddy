@@ -33,6 +33,7 @@ production_origins = [
 app.add_middleware(
     CORSMiddleware,
     allow_origins=local_origins + production_origins,
+    allow_origin_regex=r"https://voltbuddy-[a-z0-9-]+-saleahjanee-4611s-projects\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
