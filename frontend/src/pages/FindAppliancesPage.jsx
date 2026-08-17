@@ -1,14 +1,11 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { CATALOG_PAGE_SIZE } from '../api'
+import { API_BASE, CATALOG_PAGE_SIZE } from '../api'
 import { PageHeader } from '../components/Shared'
 import { useVoltBuddy } from '../context/VoltBuddyContext'
 import { getCatalogVisualPath } from '../utils/format'
 
-const API_BASE =
-  import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'
 
-  
 function smartTitleCase(value) {
   if (!value) return ''
 
