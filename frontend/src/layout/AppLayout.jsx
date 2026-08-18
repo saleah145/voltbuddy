@@ -30,7 +30,9 @@ export default function AppLayout() {
     <div className="app-shell">
       <aside className={menuOpen ? 'sidebar mobile-open' : 'sidebar'}>
         <div className="brand">
-          <div className="brand-icon">⚡</div>
+          <div className="brand-icon">
+            <img src="/horicon.png" alt="VoltBuddy logo" />
+          </div>
           <div>
             <strong>VoltBuddy</strong>
             <span>Smart energy simulator</span>
@@ -54,8 +56,14 @@ export default function AppLayout() {
         </nav>
 
         <div className="sidebar-footer">
+          <img
+            src="/favicon.png"
+            alt=""
+            className="sidebar-footer-logo"
+            aria-hidden="true"
+          />
           <span className={backendError ? 'status-dot-offline' : 'status-dot-online'} />
-          {backendError ? 'Backend unreachable' : 'Backend: localhost:8000'}
+          {backendError ? 'Backend unreachable' : 'Backend connected'}
         </div>
       </aside>
 
