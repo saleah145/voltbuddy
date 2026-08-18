@@ -61,12 +61,22 @@ export default function DashboardPage() {
         </div>
 
         <div className="welcome-visual" aria-hidden="true">
-          <div className="welcome-home-icon">⌂</div>
+          <div className="welcome-home-icon">
+            <img
+              src="/favicon.png"
+              alt=""
+              style={{
+                width: '92px',
+                height: '92px',
+                objectFit: 'contain',
+                display: 'block',
+              }}
+            />
+          </div>
           <div className="welcome-signal welcome-signal-one">⚡</div>
           <div className="welcome-signal welcome-signal-two">↓</div>
         </div>
       </section>
-
 
       <section className="dashboard-launch-grid">
         <NavLink className="dashboard-launch-card primary" to="/simulate">
