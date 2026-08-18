@@ -71,32 +71,24 @@ button {
   padding: 0 8px 26px;
 }
 
-.brand-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: transparent;
+.brand-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
 }
 
-.brand-icon img {
-  width: 100%;
-  height: 100%;
+.brand-logo-image {
+  width: 155px;
+  max-width: 100%;
+  height: auto;
   display: block;
   object-fit: contain;
 }
 
-.brand strong {
+.brand-logo-wrap span {
   display: block;
-  font-size: 19px;
-  letter-spacing: -0.02em;
-}
-
-.brand span {
-  display: block;
-  margin-top: 3px;
+  margin-top: 0;
   color: #9fb0a5;
   font-size: 12px;
 }
@@ -1119,10 +1111,8 @@ select:focus {
     display: none;
   }
 
-  .brand-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 10px;
+  .brand-logo-image {
+    width: 130px;
   }
 
   .app-nav {

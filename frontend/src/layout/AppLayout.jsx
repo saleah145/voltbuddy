@@ -30,11 +30,8 @@ export default function AppLayout() {
     <div className="app-shell">
       <aside className={menuOpen ? 'sidebar mobile-open' : 'sidebar'}>
         <div className="brand">
-          <div className="brand-icon">
-            <img src="/horicon.png" alt="VoltBuddy logo" />
-          </div>
-          <div>
-            <strong>VoltBuddy</strong>
+          <div className="brand-logo-wrap">
+            <img src="/horicon.png" alt="VoltBuddy" className="brand-logo-image" />
             <span>Smart energy simulator</span>
           </div>
           <button
